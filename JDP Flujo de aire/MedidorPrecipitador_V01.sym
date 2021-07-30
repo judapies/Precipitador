@@ -1,0 +1,170 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     line
+005-008 Velocidad
+009-00C Voltaje
+00D-010 Factor
+011-014 Prom
+015     l
+016     h
+017-018 valor
+019-038 promedio
+039     lcd_init.i
+039-03A @ITOF.P1
+039-03C @FLT.P2
+039-03C @PRINTF_L32D_85FPFPF.P3
+039     sensores.x
+039     @PSTRINGCN_85.P1
+039     MAIN.@SCRATCH1
+039     @PSTRINGC_85.@SCRATCH1
+03A-03B sensores.y
+03A     MAIN.@SCRATCH2
+03A     @PSTRINGC_85.@SCRATCH2
+03A     @PSTRINGCN_85.@SCRATCH1
+03B-03E @ADDFF.P1
+03B     MAIN.@SCRATCH3
+03B     @PSTRINGCN_85.@SCRATCH2
+03C     MAIN.@SCRATCH4
+03D-040 @FLT.P1
+03D     @PRINTF_L32D_85FPFPF.P2
+03D-040 @DIVFF.P3
+03E     @PRINTF_L32D_85FPFPF.@SCRATCH1
+03F-042 @ADDFF.P1
+03F     @PRINTF_L32D_85FPFPF.@SCRATCH2
+040     @PRINTF_L32D_85FPFPF.@SCRATCH3
+041-044 @DIVFF.P1
+041     @FLT.@SCRATCH1
+041     @PRINTF_L32D_85FPFPF.@SCRATCH4
+042     @FLT.@SCRATCH2
+042     @PRINTF_L32D_85FPFPF.@SCRATCH5
+043     @ADDFF.@SCRATCH1
+043     @PRINTF_L32D_85FPFPF.@SCRATCH6
+044     @ADDFF.@SCRATCH2
+044     @PRINTF_L32D_85FPFPF.@SCRATCH7
+045     @ADDFF.@SCRATCH3
+045     @DIVFF.@SCRATCH1
+045     @PRINTF_L32D_85FPFPF.@SCRATCH8
+046     lcd_putc.c
+046-049 @MULFF.P1
+046-049 @DIV3232.P2
+046-049 @FTOSD.P3
+046     @ADDFF.@SCRATCH4
+046     @DIVFF.@SCRATCH2
+047     @delay_ms1.P1
+047     lcd_gotoxy.x
+047     @ADDFF.@SCRATCH5
+047     @DIVFF.@SCRATCH3
+048     lcd_gotoxy.y
+048     @ADDFF.@SCRATCH6
+048     @DIVFF.@SCRATCH4
+049     lcd_gotoxy.dir
+049     @ADDFF.@SCRATCH7
+049     @DIVFF.@SCRATCH5
+04A-04D @DIV3232.P1
+04A-04D @MULFF.P2
+04A     lcd_gotoxy.@SCRATCH1
+04A     @ADDFF.@SCRATCH8
+04A     @DIVFF.@SCRATCH6
+04A     @FTOSD.@SCRATCH1
+04B     lcd_enviar.dir
+04C     lcd_enviar.valor
+04D     lcd_leer.valor
+04D     lcd_enviar.@SCRATCH1
+04E     @MULFF.@SCRATCH1
+04E     @DIV3232.@SCRATCH1
+04F     @MULFF.@SCRATCH2
+04F     @DIV3232.@SCRATCH2
+050     @MULFF.@SCRATCH3
+050     @DIV3232.@SCRATCH3
+051     @DIV3232.@SCRATCH4
+052     @DIV3232.@SCRATCH5
+F81     lcd_b
+F83     PSP_DATA
+F83.5   lcd_rs
+F83.6   lcd_rw
+F83.7   lcd_enable
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+00C0  @delay_ms1
+00E8  lcd_leer
+0114  lcd_enviar
+0156  lcd_init
+01A8  lcd_gotoxy
+020E  lcd_putc
+028C  sensores
+0A86  MAIN
+0004  @const104
+026C  @PSTRINGC_85
+0012  @const106
+0022  @const107
+002E  @const108
+0044  @const109
+005A  @const110
+0070  @const111
+02C4  @ITOF
+02FA  @ADDFF
+0564  @DIVFF
+06BE  @FLT
+0736  @MULFF
+0086  @const126
+0828  @FTOSD
+0868  @DIV3232
+08E2  @PRINTF_L32D_85FPFPF
+009C  @const136
+00B2  @const137
+0A64  @PSTRINGCN_85
+0A86  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    H:\JP\Precipitador Electrostatico\JDP Flujo de aire\
+
+Project Files:
+    MedidorPrecipitador_V01.c
+    C:\Program Files (x86)\PICC\Devices\18F4550.h
+    lcd.h
+
+Units:
+    H:\JP\Precipitador Electrostatico\JDP Flujo de aire\MedidorPrecipitador_V01 (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      MedidorPrecipitador_V01.err
+    Ext Symbols: MedidorPrecipitador_V01.esym
+    INHX32:      MedidorPrecipitador_V01.hex
+    Symbols:     MedidorPrecipitador_V01.sym
+    List:        MedidorPrecipitador_V01.lst
+    Debug/COFF:  MedidorPrecipitador_V01.cof
+    Project:     MedidorPrecipitador_V01.PJT
+    Call Tree:   MedidorPrecipitador_V01.tre
+    Statistics:  MedidorPrecipitador_V01.sta
